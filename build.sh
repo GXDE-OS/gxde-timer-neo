@@ -6,7 +6,7 @@ echo "开始编译"
 mkdir -p build
 qmake src/one-tomato.pro -spec linux-g++ CONFIG+=qtquickcompiler -o build/
 cd build/
-make
+make -j8
 cd ..
 echo "编译完成"
 echo "-------------------"
