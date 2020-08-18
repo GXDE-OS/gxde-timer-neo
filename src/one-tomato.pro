@@ -26,10 +26,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-    widget.cpp
+    widget.cpp \
+    countdown.cpp \
+    toptime.cpp
 
 HEADERS  += \
-    widget.h
+    widget.h \
+    countdown.h \
+    toptime.h
 
 CONFIG += link_pkgconfig
 PKGCONFIG += dtkwidget
@@ -40,6 +44,6 @@ FORMS += \
     widget.ui
 
 RESOURCES += \
-    assets/assets.qrc
+    ../assets/assets.qrc
 
-
+TRANSLATIONS += ../translations/one-tomato_zh_CN.ts
