@@ -1,0 +1,7 @@
+[Desktop Entry]
+Categories=Audio;AudioVideo;Qt;
+Comment=Play your music collection
+Exec=/opt/apps/com.gitee.deepin-opensource.one-tomato/files/one-tomato
+Icon=com.gitee.deepin-opensource.one-tomato
+Name=番茄钟
+Type=Application
