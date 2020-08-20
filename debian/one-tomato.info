@@ -1,8 +1,8 @@
 {
-    "appid": "top.yzzi.tomato",
-    "name": "OneTomato",
-    "version": "1.0.5",
-    "arch": ["amd64"],
+    "appid": "com.gitee.deepin-opensource.one-tomato",
+    "name": "one tomato",
+    "version": "1.0.0",
+    "arch": ["amd64", "arm64", "mips64"],
     "permissions": {
         "autostart": false,
         "notification": false,
