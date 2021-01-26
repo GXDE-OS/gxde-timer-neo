@@ -1,7 +1,7 @@
 Source: top.yzzi.tomato
 Section: utils
 Priority: optional
-Maintainer: ”daya” <”zhaozhen@uniontech.com”>
+Maintainer: ”daya” <”admin@yzzi.top”>
 Build-Depends: debhelper (>= 11), qt5-qmake, qttools5-dev-tools, libdtkwidget-dev
 Standards-Version: 4.1.3
 Homepage: https://gitee.com/deepin-opensource/one-tomato
