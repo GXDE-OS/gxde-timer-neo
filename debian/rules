@@ -29,14 +29,14 @@ override_dh_auto_build:
 override_dh_auto_test:
 
 override_dh_auto_install:
-	mkdir -p $(CURDIR)/debian/com.gitee.deepin-opensource.one-tomato/opt/apps/com.gitee.deepin-opensource.one-tomato/files/translations
-	mkdir -p $(CURDIR)/debian/com.gitee.deepin-opensource.one-tomato/opt/apps/com.gitee.deepin-opensource.one-tomato/entries/icons/hicolor/scalable/apps/
-	mkdir -p $(CURDIR)/debian/com.gitee.deepin-opensource.one-tomato/opt/apps/com.gitee.deepin-opensource.one-tomato/entries/applications
-	cp $(CURDIR)/debian/one-tomato.info $(CURDIR)/debian/com.gitee.deepin-opensource.one-tomato/opt/apps/com.gitee.deepin-opensource.one-tomato/info
-	cp $(CURDIR)/build/one-tomato $(CURDIR)/debian/com.gitee.deepin-opensource.one-tomato/opt/apps/com.gitee.deepin-opensource.one-tomato/files/
-	cp $(CURDIR)/translations/*.qm $(CURDIR)/debian/com.gitee.deepin-opensource.one-tomato/opt/apps/com.gitee.deepin-opensource.one-tomato/files/translations/
-	cp $(CURDIR)/assets/icon/top.yzzi.tomato.svg $(CURDIR)/debian/com.gitee.deepin-opensource.one-tomato/opt/apps/com.gitee.deepin-opensource.one-tomato/entries/icons/hicolor/scalable/apps/com.gitee.deepin-opensource.one-tomato.svg
-	cp $(CURDIR)/debian/com.gitee.deepin-opensource.one-tomato.desktop $(CURDIR)/debian/com.gitee.deepin-opensource.one-tomato/opt/apps/com.gitee.deepin-opensource.one-tomato/entries/applications/
+	mkdir -p $(CURDIR)/debian/top.yzzi.tomato/opt/apps/top.yzzi.tomato/files/translations
+	mkdir -p $(CURDIR)/debian/top.yzzi.tomato/opt/apps/top.yzzi.tomato/entries/icons/hicolor/scalable/apps/
+	mkdir -p $(CURDIR)/debian/top.yzzi.tomato/opt/apps/top.yzzi.tomato/entries/applications
+	cp $(CURDIR)/debian/one-tomato.info $(CURDIR)/debian/top.yzzi.tomato/opt/apps/top.yzzi.tomato/info
+	cp $(CURDIR)/build/one-tomato $(CURDIR)/debian/top.yzzi.tomato/opt/apps/top.yzzi.tomato/files/
+	cp $(CURDIR)/translations/*.qm $(CURDIR)/debian/top.yzzi.tomato/opt/apps/top.yzzi.tomato/files/translations/
+	cp $(CURDIR)/assets/icon/top.yzzi.tomato.svg $(CURDIR)/debian/top.yzzi.tomato/opt/apps/top.yzzi.tomato/entries/icons/hicolor/scalable/apps/top.yzzi.tomato.svg
+	cp $(CURDIR)/debian/top.yzzi.tomato.desktop $(CURDIR)/debian/top.yzzi.tomato/opt/apps/top.yzzi.tomato/entries/applications/
 
 override_dh_installdocs:
 

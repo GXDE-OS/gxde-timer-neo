@@ -1,5 +1,5 @@
 {
-    "appid": "com.gitee.deepin-opensource.one-tomato",
+    "appid": "top.yzzi.tomato",
     "name": "one tomato",
     "version": "1.0.0",
     "arch": ["amd64", "arm64", "mips64"],
