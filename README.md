@@ -11,7 +11,7 @@
 
 #### 依赖安装
 ```
-sudo apt install qt5-qmake qttools5-dev-tools libdtkwidget-dev debhelper libdtkwidget5 libdtkgui5 libdtkgui5 fakeroot
+sudo apt install qt5-qmake qttools5-dev-tools libdtkwidget-dev debhelper libdtkwidget5 libdtkgui5 libdtkgui5 fakeroot qtmultimedia5-dev libqt5multimedia5 libqt5multimediawidgets5
 ```
 
 #### 编译
