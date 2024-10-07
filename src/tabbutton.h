@@ -1,9 +1,10 @@
 #ifndef TABBUTTON_H
 #define TABBUTTON_H
 
+#include "dtkwidget_global.h"
 #include <QWidget>
 #include <DPushButton>
-#include <DGuiApplicationHelper>
+
 
 
 DWIDGET_USE_NAMESPACE

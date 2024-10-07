@@ -8,7 +8,7 @@
 #include <QString>
 #include <DApplication>
 #include <QDialog>
-#include <DInputDialog>
+#include <dinputdialog.h>
 #include "countdown.h"
 #include "tabbutton.h"
 #include <QDebug>
@@ -28,11 +28,12 @@ Widget::Widget(DBlurEffectWidget *parent) :
 {
     ui->setupUi(this);
     ui->gridLayout->setContentsMargins(0, 0, 0, 0);
-    ui->titlebar->setFixedHeight(50);//初始化标题栏
+    //ui->titlebar->setFixedHeight(50);//初始化标题栏
     ui->titlebar->setBackgroundTransparent(true);//设置标题栏透明
     ui->titlebar->setIcon(QIcon::fromTheme(":/icon/icon/top.yzzi.tomato.svg"));
     ui->titlebar->setTitle("");
-    setMaskAlpha(190);
+    //setMaskAlpha(190);
+    setMaskColor(LightColor);
     ui->titlebar->setMenu(m_menu);
     m_menu->addMenu(menu_times);//设置菜单
     menu_times->setTitle(tr("Time"));

@@ -9,14 +9,14 @@
 #include <DTitlebar>
 #include "countdown.h"
 #include "toptime.h"
+#include <dmainwindow.h>
 DWIDGET_USE_NAMESPACE
 
 namespace Ui {
 class Widget;
 }
 class QNetworkAccessManager;
-class Widget : public DBlurEffectWidget
-{
+class Widget : public DBlurEffectWidget {
     Q_OBJECT
 
 public:
