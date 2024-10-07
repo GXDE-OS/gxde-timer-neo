@@ -11,15 +11,16 @@ int main(int argc, char *argv[])
     DApplication a(argc, argv);
     //加载翻译文件
     QTranslator translator;
-    translator.load(a.applicationDirPath()+"/translations/one-tomato_" + QLocale::system().name());
+    a.loadTranslator();
+    //translator.load(a.applicationDirPath()+"/translations/gxde-timer_" + QLocale::system().name());
      a.setAttribute(Qt::AA_UseHighDpiPixmaps);
      a.loadTranslator();
-     a.setOrganizationName("deepin");
-     a.setApplicationVersion(DApplication::buildVersion("1.0.3"));
-     a.setApplicationAcknowledgementPage("https://blog.yzzi.top");
-     a.setProductIcon(QIcon(":/icon/icon/top.yzzi.tomato.svg"));  //设置Logo
-     a.setProductName(QObject::tr("OneTomato"));
-     a.setApplicationName(QObject::tr("OneTomato")); //只有在这儿修改窗口标题才有效
+     a.setOrganizationName("GXDE");
+     a.setApplicationVersion(DApplication::buildVersion("1.2.2"));
+     a.setApplicationAcknowledgementPage("https://gitee.com/GXDE-OS/gxde-timer-neo");
+     a.setProductIcon(QIcon::fromTheme("gxde-timer"));  //设置Logo
+     a.setProductName(QObject::tr("GXDE Timer"));
+     a.setApplicationName(QObject::tr("GXDE Timer")); //只有在这儿修改窗口标题才有效
      a.setApplicationDescription(QObject::tr("Thanks to Deepin community @gbwater for help"));
 
     Widget w;

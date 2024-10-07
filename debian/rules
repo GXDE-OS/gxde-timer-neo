@@ -18,13 +18,12 @@ export QT_SELECT := qt5
 	dh $@
 #dh_auto_configure是自动执行autogen的脚本，qt使用qmake，需要覆盖并重写
 override_dh_auto_configure:
-	mkdir -p build
-	qmake $(CURDIR)/src/one-tomato.pro -spec \
-	linux-g++ CONFIG+=qtquickcompiler -o build/
+	mkdir -p $(CURDIR)/build
+	qmake $(CURDIR) -spec 	linux-g++ CONFIG+=qtquickcompiler -o build/
 #dh_auto_build默认使用make -j$(JOBS)，本例因为makefile目录不在源码根目录，因此覆盖并重写
 override_dh_auto_build:
 	make -C $(CURDIR)/build -j$(JOBS)
-	lrelease $(CURDIR)/translations/*.ts
+	
 
 override_dh_auto_test:
 

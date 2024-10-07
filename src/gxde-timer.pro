@@ -10,7 +10,7 @@ QT += multimediawidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = one-tomato
+TARGET = gxde-timer
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -47,3 +47,5 @@ RESOURCES += \
     ../assets/assets.qrc
 
 TRANSLATIONS += ../translations/one-tomato_zh_CN.ts
+target.path=/usr/bin
+INSTALL += target

@@ -1,7 +1,8 @@
 [Desktop Entry]
 Categories=Audio;AudioVideo;Qt;
 Comment=Play your music collection
-Exec=/opt/apps/top.yzzi.tomato/files/one-tomato
-Icon=top.yzzi.tomato
-Name=一只番茄
+Exec=gxde-timer
+Icon=gxde-timer
+Name=GXDE Timer
+Name[zh_CN]=GXDE 计时器
 Type=Application

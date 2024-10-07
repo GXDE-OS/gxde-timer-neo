@@ -9,3 +9,8 @@ CONFIG(release, debug | release) {
     system(bash $${PWD}/translate_generation.sh)
 }
 
+qm.files += translations/*.qm
+qm.path = /usr/share/$${TARGET}/translations/
+
+INSTALLS += \
+        qm
