@@ -1,2 +1,2 @@
-assets/gxde-timer.desktop /usr/share/applications/
+assets/gxde-timer.desktop /usr/share/GXDE/gxde-system-assistant/tool-extensions/
 assets/icon/gxde-timer.svg /usr/share/icons/
