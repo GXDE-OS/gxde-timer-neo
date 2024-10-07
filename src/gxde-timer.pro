@@ -48,4 +48,4 @@ RESOURCES += \
 
 TRANSLATIONS += ../translations/one-tomato_zh_CN.ts
 target.path=/usr/bin
-INSTALL += target
+INSTALLS += target

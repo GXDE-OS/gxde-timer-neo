@@ -4,14 +4,13 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/main.cpp" line="21"/>
         <location filename="../src/main.cpp" line="22"/>
-        <source>OneTomato</source>
-        <translatorcomment>一只番茄</translatorcomment>
-        <translation type="unfinished">一只番茄</translation>
+        <location filename="../src/main.cpp" line="23"/>
+        <source>GXDE Timer</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="23"/>
+        <location filename="../src/main.cpp" line="24"/>
         <source>Thanks to Deepin community @gbwater for help</source>
         <translatorcomment>感谢deepin社区 @gbwater 提供的帮助</translatorcomment>
         <translation type="unfinished">感谢deepin社区 @gbwater 提供的帮助</translation>
@@ -66,25 +65,25 @@
         <translation type="unfinished">自定义时间</translation>
     </message>
     <message>
-        <location filename="../src/widget.cpp" line="38"/>
+        <location filename="../src/widget.cpp" line="39"/>
         <source>Time</source>
         <translatorcomment>时间</translatorcomment>
         <translation type="unfinished">时间</translation>
     </message>
     <message>
-        <location filename="../src/widget.cpp" line="94"/>
+        <location filename="../src/widget.cpp" line="95"/>
         <source>Congratulations! It&apos;s time to finish a tomato!</source>
         <translatorcomment>恭喜你！完成一个番茄时啦！</translatorcomment>
         <translation type="unfinished">恭喜你！完成一个番茄时啦！</translation>
     </message>
     <message>
-        <location filename="../src/widget.cpp" line="140"/>
+        <location filename="../src/widget.cpp" line="141"/>
         <source>Input time</source>
         <translatorcomment>输入时间</translatorcomment>
         <translation type="unfinished">输入时间</translation>
     </message>
     <message>
-        <location filename="../src/widget.cpp" line="141"/>
+        <location filename="../src/widget.cpp" line="142"/>
         <source>Please enter time (Min, less than 60)</source>
         <translatorcomment>请输入时间（分钟，小于60）</translatorcomment>
         <translation type="unfinished">请输入时间（分钟，小于60）</translation>

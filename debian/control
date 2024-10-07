@@ -1,7 +1,7 @@
 Source: gxde-timer-neo
 Section: utils
 Priority: optional
-Maintainer: ”daya” <”admin@yzzi.top”>
+Maintainer: shenmo <shenmo@spark-app.store>
 Build-Depends: debhelper (>= 11), qt5-qmake, qtbase5-dev, qttools5-dev-tools, libdtkwidget2-dev
 Standards-Version: 4.1.3
 Homepage: https://gitee.com/GXDE-OS/gxde-timer-neo
@@ -11,4 +11,4 @@ Homepage: https://gitee.com/GXDE-OS/gxde-timer-neo
 Package: gxde-timer
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: 番茄管理法小闹钟
+Description: gxde-timer
