@@ -16,11 +16,7 @@ sudo apt install qt5-qmake qttools5-dev-tools libdtkwidget-dev debhelper libdtkw
 
 #### 编译
 ```
-dpkg-buildpackage -b -d
-```
-
-备注：构建命令在最后阶段会失败，因为你没有我的GPG私钥，无法以我的身份为包生成GPG签名，但是这不影响你使用构建出来的包。构建实际上已经成功，只是没有GPG签名而已。
-
+dpkg-buildpackage -us -uc -b -j
 
 
 ### ✨特性
