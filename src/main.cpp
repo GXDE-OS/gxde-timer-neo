@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
      a.setAttribute(Qt::AA_UseHighDpiPixmaps);
      a.loadTranslator();
      a.setOrganizationName("GXDE");
-     a.setApplicationVersion(DApplication::buildVersion("1.2.2"));
+     a.setApplicationVersion(DApplication::buildVersion("1.2.3"));
      a.setApplicationAcknowledgementPage("https://gitee.com/GXDE-OS/gxde-timer-neo");
      a.setProductIcon(QIcon::fromTheme("gxde-timer"));  //设置Logo
      a.setProductName(QObject::tr("GXDE Timer"));
