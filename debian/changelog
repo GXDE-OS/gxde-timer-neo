@@ -1,5 +1,12 @@
-gxde-timer-neo (1.2.2-1) unstable; urgency=medium
+gxde-timer-neo (1.2.3) unstable; urgency=medium
+
+  * 修复中文翻译不完整
+
+ -- zeqi <a202128502@163.com>  Mon, 09 Feb 2026 11:08:52 +0800
+
+ gxde-timer-neo (1.2.2-1) unstable; urgency=medium
 
   * repackage scripts fix.
 
  -- ”daya” <”admin@yzzi.top”>  Wed, 19 Aug 2020 23:08:35 +0800
+

@@ -46,6 +46,6 @@ FORMS += \
 RESOURCES += \
     ../assets/assets.qrc
 
-TRANSLATIONS += ../translations/one-tomato_zh_CN.ts
+TRANSLATIONS += ../translations/gxde-timer_zh_CN.ts
 target.path=/usr/bin
 INSTALLS += target
