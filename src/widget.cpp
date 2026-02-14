@@ -30,7 +30,7 @@ Widget::Widget(DBlurEffectWidget *parent) :
     ui->gridLayout->setContentsMargins(0, 0, 0, 0);
     //ui->titlebar->setFixedHeight(50);//初始化标题栏
     ui->titlebar->setBackgroundTransparent(true);//设置标题栏透明
-    ui->titlebar->setIcon(QIcon::fromTheme(":/icon/icon/top.yzzi.tomato.svg"));
+    ui->titlebar->setIcon(QIcon::fromTheme("gxde-timer"));
     ui->titlebar->setTitle("");
     //setMaskAlpha(190);
     setMaskColor(LightColor);
@@ -43,7 +43,7 @@ Widget::Widget(DBlurEffectWidget *parent) :
     menu_times->addAction(m_35);
     menu_times->addAction(m_45);
     menu_times->addAction(m_set);
-    setWindowIcon(QIcon("/usr/share/icons/hicolor/512x512/apps/OneTomato.png"));
+    setWindowIcon(QIcon::fromTheme("gxde-timer"));
     timesGroup = new QActionGroup(this);//设置按钮互斥
     timesGroup->addAction(m_5);
     timesGroup->addAction(m_15);
@@ -92,7 +92,7 @@ Widget::Widget(DBlurEffectWidget *parent) :
     connect(toptime,&topTime::refreshed,this,&Widget::refreshTime);
     connect(count,&countDown::ended,player,&QMediaPlayer::play);
     QString notify;
-    notify ="notify-send \""+ tr("Congratulations! It's time to finish a tomato!")+"\" --icon=/usr/share/icons/hicolor/512x512/apps/OneTomato.png";
+    notify ="notify-send \""+ tr("Congratulations! It's time to finish a tomato!")+"\" --icon=gxde-timer";
     qDebug()<<notify;
     connect(count,&countDown::ended,[=](){system(notify.toUtf8());});
     //时间控制
