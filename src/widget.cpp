@@ -138,7 +138,7 @@ Widget::~Widget()
 void Widget::input()//输入时间
 {
     bool isOK;
-    int i = DInputDialog::getInt(this, tr("Input time"),
+    int i = QInputDialog::getInt(this, tr("Input time"),
                                         tr("Please enter time (Min, less than 60)"),
                                         count->mem/60,0,100,1,&isOK);
     if(isOK)
