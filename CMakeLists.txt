@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # 翻译工具
-find_package(Qt5LinguistTools)
+find_package(Qt6LinguistTools)
 
 add_subdirectory(src)
 
@@ -19,7 +19,7 @@ set(UPDATE_SOURCES
     src/toptime.cpp src/toptime.h
 )
 
-qt5_create_translation(QM_FILES ${UPDATE_SOURCES} ${TS_FILES}
+qt6_create_translation(QM_FILES ${UPDATE_SOURCES} ${TS_FILES}
     OPTIONS -no-obsolete
 )
 
