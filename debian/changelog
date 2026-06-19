@@ -4,7 +4,7 @@ gxde-timer-neo (1.2.3) unstable; urgency=medium
 
  -- zeqi <a202128502@163.com>  Mon, 09 Feb 2026 11:08:52 +0800
 
- gxde-timer-neo (1.2.2-1) unstable; urgency=medium
+gxde-timer-neo (1.2.2-1) unstable; urgency=medium
 
   * repackage scripts fix.
 

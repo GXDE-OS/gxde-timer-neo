@@ -1,7 +1,7 @@
 #include <DApplication>
-#include <QDesktopWidget>
+// #include <QDesktopWidget>
 #include <DWidgetUtil>  //Dtk::Widget::moveToCenter(&w); 要调用它，就得引用DWidgetUtil
-#include <widget.h>
+#include "widget.h"
 #include <QTranslator>
 
 DWIDGET_USE_NAMESPACE
@@ -18,13 +18,13 @@ int main(int argc, char *argv[])
      a.setOrganizationName("GXDE");
      a.setApplicationVersion(DApplication::buildVersion("1.2.3"));
      a.setApplicationAcknowledgementPage("https://gitee.com/GXDE-OS/gxde-timer-neo");
-     a.setProductIcon(QIcon::fromTheme("gxde-timer"));  //设置Logo
+     a.setProductIcon(QIcon(":/icon/icon/gxde-timer.svg"));  //设置Logo
      a.setProductName(QObject::tr("GXDE Timer"));
      a.setApplicationName(QObject::tr("GXDE Timer")); //只有在这儿修改窗口标题才有效
      a.setApplicationDescription(QObject::tr("Thanks to Deepin community @gbwater for help"));
 
     Widget w;
-    QDesktopWidget *s=DApplication::desktop();
+    // QDesktopWidget *s=DApplication::desktop();
     w.show();
 
     //让打开时界面显示在正中
