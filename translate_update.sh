@@ -3,4 +3,4 @@
 
 cd $(dirname $0)
 
-lupdate ./src/gxde-timer.pro -no-obsolete
+/usr/lib/qt6/bin/lupdate ./src/* -ts ./translations/*.ts -no-obsolete

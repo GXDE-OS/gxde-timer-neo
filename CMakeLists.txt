@@ -4,30 +4,21 @@ project(gxde-timer LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# 翻译工具
-find_package(Qt6LinguistTools)
-
 add_subdirectory(src)
 
-# ====== 翻译 ======
-set(TS_FILES translations/gxde-timer_zh_CN.ts)
+set(TS_FILE ${CMAKE_SOURCE_DIR}/translations/gxde-timer_zh_CN.ts)
+set(QM_FILE ${CMAKE_SOURCE_DIR}/translations/gxde-timer_zh_CN.qm)
 
-set(UPDATE_SOURCES
-    src/main.cpp
-    src/widget.cpp src/widget.h src/widget.ui
-    src/countdown.cpp src/countdown.h
-    src/toptime.cpp src/toptime.h
+add_custom_target(translations ALL
+    COMMAND ${CMAKE_SOURCE_DIR}/translate_generation.sh
+    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+    DEPENDS ${TS_FILE}                      # 仅当 .ts 变化时才重新生成
+    BYPRODUCTS ${QM_FILE}                   # 声明此文件由命令生成
+    COMMENT "Generating .qm translation file using translate_generation.sh"
 )
 
-qt6_add_translation(QM_FILES ${UPDATE_SOURCES} ${TS_FILES}
-    OPTIONS -no-obsolete
-)
-
-add_custom_target(translations ALL DEPENDS ${QM_FILES})
-
-install(FILES ${QM_FILES}
-    DESTINATION share/gxde-timer/translations
-)
+install(FILES ${QM_FILE}
+    DESTINATION share/gxde-timer/translations)
 
 # ====== 附加文件安装 ======
 install(FILES assets/gxde-timer.desktop
