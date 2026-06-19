@@ -23,9 +23,10 @@ public:
     explicit Widget(DBlurEffectWidget *parent = 0);
     ~Widget();
     QMediaPlayer *player;
-    QMediaPlaylist *playlist;
+    // QMediaPlaylist *playlist;
     DTitlebar* getTitlebar();
-    bool btSwitch;
+    // bool btSwitch;
+    bool btSwitch = false;
 
 
 private slots:

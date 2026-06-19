@@ -3,4 +3,4 @@
 
 cd $(dirname $0)
 
-lrelease ./src/gxde-timer.pro
+/usr/lib/qt6/bin/lrelease translations/gxde-timer_zh_CN.ts -qm translations/gxde-timer_zh_CN.qm

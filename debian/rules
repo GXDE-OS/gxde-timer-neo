@@ -1,46 +1,12 @@
 #!/usr/bin/make -f
-#防止系统存在多个QT版本请看下引用qt编译环境错误，定义使用的QT版本
-export QT_SELECT := qt5
-#export DH_VERBOSE = 1
+# export QT_SELECT := qt5
 include /usr/share/dpkg/default.mk
-
-# see FEATURE AREAS in dpkg-buildflags(1)
-#export DEB_BUILD_MAINT_OPTIONS = hardening=+all
-
-# see ENVIRONMENT in dpkg-buildflags(1)
-# package maintainers to append CFLAGS
-#export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
-# package maintainers to append LDFLAGS
-#export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
-
 
 %:
 	dh $@ --parallel
-#dh_auto_configure是自动执行autogen的脚本，qt使用qmake，需要覆盖并重写
+
+# 传递上游版本号给 CMake（可选）
 override_dh_auto_configure:
-	mkdir -p $(CURDIR)/build-$(DEB_HOST_MULTIARCH)
-	qmake BUILD_VERSION=$(DEB_VERSION_UPSTREAM)  \
-	-spec linux-g++ CONFIG+=force_debug_info \
-	-o $(CURDIR)/build-$(DEB_HOST_MULTIARCH)/
+	dh_auto_configure -- -DVERSION=$(DEB_VERSION_UPSTREAM)
 
-#dh_auto_build默认使用make -j$(JOBS)，本例因为makefile目录不在源码根目录，因此覆盖并重写
-override_dh_auto_build:
-	make -C $(CURDIR)/build-$(DEB_HOST_MULTIARCH) -j$(JOBS)
-	
-
-override_dh_auto_test:
-
-override_dh_auto_install:
-	make -C $(CURDIR)/build-$(DEB_HOST_MULTIARCH) install \
-	INSTALL_ROOT=$(CURDIR)/debian/gxde-timer
-override_dh_installdocs:
-
-override_dh_installchangelogs:
-
-override_dh_makeshlibs:
-
-# dh_make generated override targets
-# This is example for Cmake (See https://bugs.debian.org/641051 )
-#override_dh_auto_configure:
-#	dh_auto_configure -- #	-DCMAKE_LIBRARY_PATH=$(DEB_HOST_MULTIARCH)
-
+# 其余 dh 步骤自动处理，无需覆盖

@@ -3,7 +3,7 @@
 #include <QDateTime>
 #include <QTimer>
 #include <QMediaPlayer>
-#include <QMediaPlaylist>
+// #include <QMediaPlaylist>
 #include <sstream>
 #include <QString>
 #include <DApplication>
@@ -12,6 +12,8 @@
 #include "countdown.h"
 #include "tabbutton.h"
 #include <QDebug>
+#include <QActionGroup>
+#include <QAudioOutput>
 using namespace std;
 Widget::Widget(DBlurEffectWidget *parent) :
     DBlurEffectWidget(parent),
@@ -84,8 +86,12 @@ Widget::Widget(DBlurEffectWidget *parent) :
 
     //结束时音频播放（待修改！）
      player = new QMediaPlayer(this);
-     player->setVolume(100);
-     player->setMedia(QUrl("qrc:/audio/ding.wav"));
+     QAudioOutput *audioOutput = new QAudioOutput(this);
+     audioOutput->setVolume(1.0);          
+     player->setAudioOutput(audioOutput);
+     // player->setVolume(100);
+     // player->setMedia(QUrl("qrc:/audio/ding.wav"));
+     player->setSource(QUrl("qrc:/audio/ding.wav"));
 
     //设置界面刷新和对象响应
     connect(count,&countDown::refreshed,this,&Widget::refreshCount);
@@ -119,7 +125,8 @@ void Widget::refreshTime()//用toptime的信息刷新时间显示
 }
 void Widget::refreshCount()//用count的信息刷新倒计时显示
 {
-    QDateTime tomato_time = QDateTime::fromTime_t(count->ms);
+    // QDateTime tomato_time = QDateTime::fromTime_t(count->ms);
+    QDateTime tomato_time = QDateTime::fromSecsSinceEpoch(count->ms);
     QString textout=tomato_time.toString("mm:ss");
     ui->time->setText(textout);
 }
