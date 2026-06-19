@@ -7,10 +7,6 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
-# 查找 dtkwidget (通过 pkg-config)
-find_package(PkgConfig REQUIRED)
-pkg_check_modules(DTKWidget REQUIRED dtkwidget)
-
 # 源文件
 set(SOURCES
     main.cpp
