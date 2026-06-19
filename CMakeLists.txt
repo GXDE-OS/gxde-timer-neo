@@ -19,7 +19,7 @@ set(UPDATE_SOURCES
     src/toptime.cpp src/toptime.h
 )
 
-qt6_create_translation(QM_FILES ${UPDATE_SOURCES} ${TS_FILES}
+qt6_add_translation(QM_FILES ${UPDATE_SOURCES} ${TS_FILES}
     OPTIONS -no-obsolete
 )
 
