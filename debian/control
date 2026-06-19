@@ -2,7 +2,7 @@ Source: gxde-timer-neo
 Section: utils
 Priority: optional
 Maintainer: shenmo <shenmo@spark-app.store>
-Build-Depends: debhelper (>= 11), cmake, qt6-base-dev, qt6-tools-dev-tools, libdtk2widget6-dev
+Build-Depends: debhelper (>= 11), cmake, qt6-base-dev, qt6-tools-dev-tools, libdtk2widget6-dev, qt6-multimedia-dev
 Standards-Version: 4.1.3
 Homepage: https://gitee.com/GXDE-OS/gxde-timer-neo
 #Vcs-Browser: https://salsa.debian.org/debian/org.gitee.deepin-opensource.one-tomato
